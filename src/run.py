@@ -1,7 +1,6 @@
 import mnist_loader
 import network
 
-print("running")
 training_data, validation_data, test_data = \
 mnist_loader.load_data_wrapper()
 

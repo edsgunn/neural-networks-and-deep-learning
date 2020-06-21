@@ -65,6 +65,8 @@ class Network(object):
                     j, self.evaluate(test_data), n_test)
             else:
                 print "Epoch {0} complete".format(j)
+        np.savetxt("weights.csv", self.weights, delimiter=",")
+        np.savetxt("biases.csv", self.biases, delimiter=",")
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying
